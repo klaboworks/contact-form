@@ -1,0 +1,37 @@
+:root {
+    --brown: #8B7969;
+    --border: #E0DFDE;
+}
+
+.inika-regular {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inika-bold {
+    font-family: "Inika", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+
+.header {
+    height: 100px;
+    border-bottom: solid 1px var(--border);
+}
+
+.header__inner {
+    display: flex;
+}
+
+.header__site-title {
+    color: var(--brown);
+    margin: 0;
+    font-size: 40px;
+}
+
+.nav>ul {
+    display: flex;
+}

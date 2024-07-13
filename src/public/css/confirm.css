@@ -1,0 +1,67 @@
+:root {
+    --brown: #8B7969;
+    --border: #E0DFDE;
+}
+
+.inika-regular {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inika-bold {
+    font-family: "Inika", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.confirm-content {
+    max-width: 972px;
+    margin: 0 auto;
+}
+
+.confirm__heading {
+    font-size: 35px;
+    color: var(--brown);
+    text-align: center;
+}
+
+.confirm-table {
+    border-collapse: collapse;
+    margin-bottom: 48px;
+}
+
+.confirm-table__head {
+    width: 305px;
+    background-color: #BAA899;
+    text-align: start;
+    padding: 24px;
+    color: #FFFFFF;
+    border: solid 1px #E0DFDE;
+}
+
+.confirm-table__data {
+    width: 667px;
+    border: solid 1px #E0DFDE;
+    padding: 24px;
+}
+
+.buttons-group {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    align-items: center;
+}
+
+.confirm-button__submit {
+    padding: 8px 32px;
+    border: none;
+    border-radius: 0;
+    background-color: #82756A;
+    color: white;
+    cursor: pointer;
+}
+
+.confirm-link__correct {
+    color: #8B7969;
+}
