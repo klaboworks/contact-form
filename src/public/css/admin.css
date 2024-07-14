@@ -1,0 +1,173 @@
+.admin__content {
+    max-width: 1184px;
+    margin: 0 auto;
+}
+
+.admin__heading {
+    text-align: center;
+}
+
+.admin__title {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 35px;
+    color: #8B7969;
+    margin: 48px 0 36px;
+}
+
+.admin__nav ul {
+    margin-bottom: 40px;
+}
+
+.admin__nav ul {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav__email {
+    width: 347px;
+}
+
+.nav__search,
+.nav__reset,
+.nav__gender {
+    width: 102px;
+}
+
+.nav__date {
+    width: 148px;
+}
+
+.nav__category {
+    width: 223px;
+}
+
+.nav__email-input,
+.nav__date-input {
+    height: 48px;
+    width: 100%;
+    border: solid 1px #E3DED9;
+    padding-left: 12px;
+    background-color: #F4F4F4;
+}
+
+.nav__email-input {
+    background-color: #FBFBFB;
+}
+
+.nav__gender-select,
+.nav__category-select {
+    height: 52px;
+    width: 100%;
+    border: solid 1px #E3DED9;
+    padding-left: 12px;
+    background-color: #F4F4F4;
+}
+
+.nav__search-submit {
+    border: none;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #8B7969;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.nav__reset-submit {
+    display: inline-block;
+    height: 50px;
+    line-height: 50px;
+    width: 100%;
+    color: white;
+    background-color: #D9C6B5;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+::placeholder {
+    color: #BEB1A6;
+}
+
+.menu-bar {
+    margin-bottom: 32px;
+}
+
+.menu__csv-export {
+    height: 40px;
+    width: 148px;
+    padding: 8px 20px;
+    background-color: #E1DBD699;
+    color: #8B7969;
+    border: none;
+}
+
+.contacts-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.contacts-table__row--header {
+    height: 59px;
+    background-color: #8B7969;
+}
+
+.table-header {
+    color: white;
+    text-align: start;
+    padding-left: 48px;
+}
+
+.th--name {
+    width: 20%;
+}
+
+.th--gender {
+    width: 10%;
+}
+
+.th--email {
+    width: 30%;
+}
+
+.th--category {
+    width: 25%;
+}
+
+.contacts-table__row {
+    height: 72px;
+    border: solid 1px #E0DFDE;
+}
+
+.table-data {
+    text-align: start;
+    padding-left: 48px;
+}
+
+.customer-last_name{
+    margin-right: 20px;
+}
+
+.table-data__button-detail {
+    width: 76px;
+    height: 39px;
+    padding: 8px 20px;
+    background-color: #F4F4F4;
+    color: #D9C6B5;
+    border: solid 1px #D9C6B5;
+    cursor: pointer;
+}
+
+.pagination {
+    display: inline-block;
+  }
+      
+  .pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
