@@ -17,10 +17,11 @@
     <header class="header">
         <div class="header__inner">
             <h1 class="header__site-title inika-regular">FashionablyLate</h1>
-            <nav class="nav">
-                <ul>
-                    <li>aaa</li>
-                    <li>bbb</li>
+            <nav class="nav-menu">
+                <ul class="nav-menu__list">
+                    <li class="nav-menu__item inika-regular">register </li>
+                    <li class="nav-menu__item inika-regular">login</li>
+                    <li class="nav-menu__item inika-regular">logout</li>
                 </ul>
             </nav>
         </div>

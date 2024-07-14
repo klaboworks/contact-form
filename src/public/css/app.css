@@ -20,18 +20,40 @@
 .header {
     height: 100px;
     border-bottom: solid 1px var(--border);
+    background-color: white;
+    z-index: 100;
 }
 
 .header__inner {
-    display: flex;
+    text-align: center;
+    position: relative;
 }
 
 .header__site-title {
+    line-height: 100px;
     color: var(--brown);
     margin: 0;
     font-size: 40px;
 }
 
-.nav>ul {
+.nav-menu {
+    position: absolute;
+    right: 32px;
+    bottom: 50%;
+    transform: translateY(50%);
+}
+
+.nav-menu__list {
     display: flex;
+}
+
+.nav-menu__item {
+    width: 100px;
+    height: 34px;
+    background-color: #F0F0F099;
+    border: solid 1px #D9C6B5;
+    color: #D9C6B5;
+    font-size: 20px;
+    cursor: pointer;
+    line-height: 34px;
 }

@@ -42,9 +42,8 @@
 
         <menu class="menu-bar">
             <button class="menu__csv-export">エクスポート</button>
-            {{ $contacts->links() }}
         </menu>
-
+        
         <table class="contacts-table">
             <tr class="contacts-table__row--header">
                 <th class="table-header th--name">お名前</th>
@@ -56,24 +55,25 @@
             @foreach($contacts as $contact)
             <tr class="contacts-table__row">
                 <td class="table-data">
-                    <span class="customer-last_name">{{$contact['last_name']}}</span>
-                    <span class="customer-first_name">{{$contact['first_name']}}</span>
+                    <span class="customer-last_name">{{$contact->last_name}}</span>
+                    <span class="customer-first_name">{{$contact->first_name}}</span>
                 </td>
                 <td class="table-data">
-                    @if($contact['gender']==1)
+                    @if($contact->gender==1)
                     {{'男性'}}
-                    @elseif($contact['gender']==2)
+                    @elseif($contact->gender==2)
                     {{'女性'}}
                     @else
                     {{'その他'}}
                     @endif
                 </td>
-                <td class="table-data">{{$contact['email']}}</td>
+                <td class="table-data">{{$contact->email}}</td>
                 <td class="table-data">商品の返品について</td>
                 <td class="table-data"><button class="table-data__button-detail">詳細</button></td>
             </tr>
             @endforeach
         </table>
+        {{ $contacts->links() }}
     </div>
 
 </div>
