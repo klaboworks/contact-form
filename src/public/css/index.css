@@ -57,6 +57,11 @@
     gap: 40px;
 }
 
+.form-input__last-name,
+.form-input__first-name {
+    flex: 1;
+}
+
 input {
     width: 100%;
     height: 38px;
@@ -85,6 +90,10 @@ textarea {
 ::placeholder,
 .form-input__category--default {
     color: #BEB1A6;
+}
+
+.form-input__error-message {
+    color: #FF9494;
 }
 
 .form-button {
