@@ -72,10 +72,10 @@
         <div class="form-group">
             <div class="form-title required">電話番号</div>
             <div class="form-input">
-                <div class="form-input__tel">
-                    <input type="text" name="tel" placeholder="09012345678" value="{{old('tel')}}">
+                <div class="form-input__tell">
+                    <input type="text" name="tell" placeholder="09012345678" value="{{old('tell')}}">
                 </div>
-                @error('tel')
+                @error('tell')
                 <small class="form-input__error-message">{{$message}}</small>
                 @enderror
             </div>
@@ -111,9 +111,14 @@
                 <div class="form-input__category">
                     <select name="category_id" id="">
                         <option value="" class="form-input__category--default">選択してください</option>
-                        <option value="">カテゴリ</option>
+                        @foreach($categories as $category)
+                        <option name="category_id" value="{{$category['id']}}">{{$category['content']}}</option>
+                        @endforeach
                     </select>
                 </div>
+                @error('category_id')
+                <small class="form-input__error-message">{{$message}}</small>
+                @enderror
             </div>
         </div>
 
@@ -122,7 +127,7 @@
             <div class="form-title required">お問い合わせ内容</div>
             <div class="form-input">
                 <div class="form-input__detail">
-                    <textarea name="detail" placeholder="お問い合わせ内容をご記載ください" value="{{old('detail')}}"></textarea>
+                    <textarea name="detail" placeholder="お問い合わせ内容をご記載ください"> {{ old('detail') }}</textarea>
                 </div>
                 @error('detail')
                 <small class="form-input__error-message">{{$message}}</small>

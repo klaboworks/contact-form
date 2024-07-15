@@ -50,6 +50,7 @@
     width: 100%;
     border: solid 1px #E3DED9;
     background-color: #F4F4F4;
+    padding-left: 12px;
 }
 
 .nav__email-input {
@@ -90,7 +91,6 @@
 
 ::placeholder {
     color: #BEB1A6;
-    padding-left: 12px;
 }
 
 .menu-bar {

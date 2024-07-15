@@ -40,8 +40,8 @@
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__head">電話番号</th>
-                <td class="confirm-table__data">{{$contact['tel']}}</td>
-                <input type="hidden" name="tel" value="{{$contact['tel']}}">
+                <td class="confirm-table__data">{{$contact['tell']}}</td>
+                <input type="hidden" name="tell" value="{{$contact['tell']}}">
             </tr>
             <tr class=" confirm-table__row">
                 <th class="confirm-table__head">住所</th>
@@ -55,7 +55,20 @@
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__head">お問い合わせの種類</th>
-                <td class="confirm-table__data"></td>
+                <td class="confirm-table__data">
+                    @if($contact['category_id']==1)
+                    {{'商品のお届けについて'}}
+                    @elseif($contact['category_id']==2)
+                    {{'商品の交換について'}}
+                    @elseif($contact['category_id']==3)
+                    {{'商品トラブル'}}
+                    @elseif($contact['category_id']==4)
+                    {{'ショップへのお問い合わせ'}}
+                    @elseif($contact['category_id']==5)
+                    {{'その他'}}
+                    @endif
+                </td>
+                <input type="hidden" name="category_id" value="{{$contact['category_id']}}">
             </tr>
             <tr class="confirm-table__row">
                 <th class="confirm-table__head">お問い合わせ内容</th>

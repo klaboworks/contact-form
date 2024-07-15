@@ -11,13 +11,26 @@ class Contact extends Model
 
     protected $fillable =
     [
+        'category_id',
         'first_name',
         'last_name',
         'gender',
         'email',
-        'tel',
+        'tell',
         'address',
         'building',
         'detail'
     ];
+
+    public function category()
+    {
+        return $this->belongsTo(Category::class);
+    }
+
+    public function scopeCategorySearch($query, $category_id)
+    {
+        if (!empty($category_id)) {
+            $query->where('category_id', $category_id);
+        }
+    }
 }

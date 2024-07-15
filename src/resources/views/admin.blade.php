@@ -12,29 +12,34 @@
         <nav class="admin__nav">
             <form action="">
                 <ul>
-                    <li class="nav__email">
-                        <input type="text" name="email" class="nav__email-input" placeholder="名前やメールアドレスを入力してください">
-                    </li>
-                    <li class="nav__gender">
-                        <select name="" class="nav__gender-select">
-                            <option value="">性別</option>
-                            <option value=""></option>
-                        </select>
-                    </li>
-                    <li class="nav__category">
-                        <select name="" class="nav__category-select">
-                            <option value="">お問い合せの種類</option>
-                            <option value=""></option>
-                        </select>
-                    </li>
-                    <li class="nav__date">
-                        <input type="date" name="created_at" class="nav__date-input">
-                    </li>
-                    <li class="nav__search">
-                        <button class="nav__search-submit">検索</button>
-                    </li>
+                    <form action="admin/search" method="get">
+                        @csrf
+                        <li class="nav__email">
+                            <input type="text" name="email" class="nav__email-input" placeholder="名前やメールアドレスを入力してください">
+                        </li>
+                        <li class="nav__gender">
+                            <select name="gender" class="nav__gender-select">
+                                <option value="">性別</option>
+                                <option value=""></option>
+                            </select>
+                        </li>
+                        <li class="nav__category">
+                            <select name="category_id" class="nav__category-select">
+                                <option value="">お問い合せの種類</option>
+                                @foreach($categories as $category)
+                                <option value="{{$category->id}}">{{$category->content}}</option>
+                                @endforeach
+                            </select>
+                        </li>
+                        <li class="nav__date">
+                            <input type="date" name="created_at" class="nav__date-input">
+                        </li>
+                        <li class="nav__search">
+                            <button class="nav__search-submit">検索</button>
+                        </li>
+                    </form>
                     <li class="nav__reset">
-                        <a class="nav__reset-submit">リセット</a>
+                        <a class="nav__reset-submit" href="/admin">リセット</a>
                     </li>
                 </ul>
             </form>
@@ -43,7 +48,7 @@
         <menu class="menu-bar">
             <button class="menu__csv-export">エクスポート</button>
         </menu>
-        
+
         <table class="contacts-table">
             <tr class="contacts-table__row--header">
                 <th class="table-header th--name">お名前</th>
@@ -68,12 +73,12 @@
                     @endif
                 </td>
                 <td class="table-data">{{$contact->email}}</td>
-                <td class="table-data">商品の返品について</td>
+                <td class="table-data">{{$contact->category['content']}}
+                </td>
                 <td class="table-data"><button class="table-data__button-detail">詳細</button></td>
             </tr>
             @endforeach
         </table>
-        {{ $contacts->links() }}
     </div>
 
 </div>

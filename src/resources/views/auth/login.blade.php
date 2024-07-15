@@ -14,12 +14,13 @@
 
     <div class="login-form">
         <form action="/login" method="post" class="form">
+            @csrf
             <div class="login-form__inner">
                 <div class="form__group">
                     <p class="form__label-email">
                         メールアドレス
                     </p>
-                    <input type="text" name="email" class="form__input-email" placeholder="例：test@example.com">
+                    <input type="email" name="email" class="form__input-email" placeholder="例：test@example.com">
                     <div class="input-form__error-message">
                         @error('email')
                         {{$message}}
@@ -30,7 +31,12 @@
                     <p class="form__label-password">
                         パスワード
                     </p>
-                    <input type="text" name="password" class="form__input-password" placeholder="例：coachtech1106">
+                    <input type="password" name="password" class="form__input-password" placeholder="例：coachtech1106">
+                    <div class="input-form__error-message">
+                        @error('password')
+                        {{$message}}
+                        @enderror
+                    </div>
                 </div>
                 <div class="form__button">
                     <button class="form__button--submit">ログイン</button>

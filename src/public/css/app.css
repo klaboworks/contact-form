@@ -57,3 +57,8 @@
     cursor: pointer;
     line-height: 34px;
 }
+
+.nav-menu__item a {
+    text-decoration: none;
+    color: #D9C6B5;
+}
