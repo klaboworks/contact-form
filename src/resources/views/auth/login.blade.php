@@ -21,7 +21,7 @@
                     </p>
                     <input type="text" name="email" class="form__input-email" placeholder="例：test@example.com">
                     <div class="input-form__error-message">
-                        @error
+                        @error('email')
                         {{$message}}
                         @enderror
                     </div>

@@ -11,19 +11,19 @@ class AdminController extends Controller
 {
     public function register()
     {
-        return view('register');
+        return view('auth.register');
     }
 
     public function createAccount(UserRequest $request)
     {
         $user = $request->only(['name', 'email', 'password']);
         User::create($user);
-        return view('login');
+        return view('auth.login');
     }
 
     public function login()
     {
-        return view('login');
+        return view('auth.login');
     }
 
     public function loginSucces()
