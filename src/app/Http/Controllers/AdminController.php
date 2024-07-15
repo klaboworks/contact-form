@@ -21,6 +21,6 @@ class AdminController extends Controller
     {
         $contacts = Contact::with('category')->CategorySearch($request->category_id)->get();
         $categories = Category::all();
-        return view('admin', compact('contacts'));
+        return view('admin', compact('contacts','categories'));
     }
 }
