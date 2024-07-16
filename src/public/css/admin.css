@@ -1,3 +1,15 @@
+.inika-regular {
+    font-family: "Inika", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.inika-bold {
+    font-family: "Inika", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
 .admin__content {
     max-width: 1184px;
     margin: 0 auto;
@@ -8,9 +20,6 @@
 }
 
 .admin__title {
-    font-family: "Inika", serif;
-    font-weight: 400;
-    font-style: normal;
     font-size: 35px;
     color: #8B7969;
     margin: 48px 0 36px;
@@ -86,6 +95,7 @@
     color: white;
     background-color: #D9C6B5;
     font-size: 18px;
+    text-decoration: none;
     cursor: pointer;
 }
 
@@ -146,6 +156,7 @@
 .table-data {
     text-align: start;
     padding-left: 48px;
+    color: #8B7969;
 }
 
 .customer-last_name {
@@ -173,8 +184,52 @@
     text-decoration: none;
 }
 
-.table-data__detail-inner table{
+.contacts-detail {
+    border: none;
+}
+
+.contacts-detail__inner {
     max-width: 805px;
     border: solid 1px #8B7969;
     box-shadow: 4px 4px 4px #8B796940;
+    padding: 80px;
+    position: relative;
+}
+
+.contacts-detail__table-row {
+    height: 48px;
+}
+
+.contacts-detail__table-header {
+    text-align: start;
+    padding-right: 48px;
+    font-size: 20px;
+    color: #8B7969;
+}
+
+.contacts-detail__table-data {
+    font-size: 20px;
+    color: #8B7969;
+}
+
+.contacs-detail__delete-button--submit {
+    width: 76px;
+    height: 39px;
+    padding: 8px 20px;
+    background-color: #BA370D;
+    color: white;
+    font-size: 18px;
+    border: none;
+    display: block;
+    margin: 80px auto 0;
+    cursor: pointer;
+}
+
+.contacts-detail__button--close {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+    position: absolute;
+    top: 40px;
+    right: 40px;
 }

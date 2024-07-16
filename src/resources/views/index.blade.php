@@ -82,8 +82,8 @@
         </div>
 
         <!-- 住所 -->
-        <div class="form-group required">
-            <div class="form-title">住所</div>
+        <div class="form-group">
+            <div class="form-title required">住所</div>
             <div class="form-input">
                 <div class="form-input__address">
                     <input type="text" name="address" placeholder="例：東京都渋谷区千駄ヶ谷1-2-3" value="{{old('address')}}">

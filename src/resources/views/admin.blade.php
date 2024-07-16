@@ -7,7 +7,7 @@
 <div class="admin__content">
 
     <div class="admin__heading">
-        <h2 class="admin__title">Admin</h2>
+        <h2 class="admin__title inika-regular">Admin</h2>
 
         <form action="admin/search" method="get">
             @csrf
@@ -72,23 +72,24 @@
                     {{'その他'}}
                     @endif
                 </td>
-                <td class="table-data">{{$contact->email}}</td>
+                <td class="table-data inika-regular">{{$contact->email}}</td>
                 <td class="table-data">{{$contact->category['content']}}
                 </td>
                 <td class="table-data">
                     <button class="table-data__button-detail" popovertarget="mypopover">詳細</button>
-                    <div id="mypopover" class="table-data__detail--modal" popover>
-                        <div class="table-data__detail-inner">
-                            <table>
-                                <tr>
-                                    <th>お名前</th>
-                                    <td>
+                    <div id="mypopover" class="contacts-detail" popover>
+                        <div class="contacts-detail__inner">
+                            <img src="../../public/img/Group 91.png" alt="" class="contacts-detail__button--close">
+                            <table class="contacts-detail__table">
+                                <tr class="contacts-detail__table-row">
+                                    <th class="contacts-detail__table-header">お名前</th>
+                                    <td class="contacts-detail__table-data">
                                         <span>{{$contact->last_name}}</span><span>{{$contact->first_name}}</span>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>性別</th>
-                                    <td>
+                                    <th class="contacts-detail__table-header">性別</th>
+                                    <td class="contacts-detail__table-data">
                                         <p> @if($contact->gender==1)
                                             {{'男性'}}
                                             @elseif($contact->gender==2)
@@ -100,43 +101,48 @@
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>メールアドレス</th>
-                                    <td>
+                                    <th class="contacts-detail__table-header">メールアドレス</th>
+                                    <td class="contacts-detail__table-data">
                                         <p>{{$contact->email}}</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>電話番号</th>
-                                    <td>
+                                    <th class="contacts-detail__table-header">電話番号</th>
+                                    <td class="contacts-detail__table-data">
                                         <p>{{$contact->tell}}</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>住所</th>
-                                    <td>
+                                    <th class="contacts-detail__table-header">住所</th>
+                                    <td class="contacts-detail__table-data">
                                         <p>{{$contact->address}}</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>建物名</th>
-                                    <td>
+                                    <th class="contacts-detail__table-header">建物名</th>
+                                    <td class="contacts-detail__table-data">
                                         <p>{{$contact->building}}</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>お問い合わせの種類</th>
-                                    <td>
+                                    <th class="contacts-detail__table-header">お問い合わせの種類</th>
+                                    <td class="contacts-detail__table-data">
                                         <p>{{$contact->category['content']}}</p>
                                     </td>
                                 </tr>
                                 <tr>
-                                    <th>お問い合わせ内容</th>
-                                    <td>
+                                    <th class="contacts-detail__table-header">お問い合わせ内容</th>
+                                    <td class="contacts-detail__table-data">
                                         <p>{{$contact->detail}}</p>
                                     </td>
                                 </tr>
-
                             </table>
+                            <form action="/admin/delete" method="post">
+                                @csrf
+                                <button class="contacs-detail__delete-button--submit">
+                                    削除
+                                </button>
+                            </form>
                         </div>
                     </div>
                 </td>

@@ -65,3 +65,7 @@
 .confirm-link__correct {
     color: #8B7969;
 }
+
+.confirm-table__data--name{
+    margin-right: 16px;
+}
