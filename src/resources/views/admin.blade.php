@@ -11,15 +11,17 @@
 
         <nav class="admin__nav">
             <form action="admin/search" method="get">
+                @csrf
                 <ul>
-                    @csrf
-                    <li class="nav__email">
-                        <input type="text" name="email" class="nav__email-input" placeholder="名前やメールアドレスを入力してください">
+                    <li class="nav__name">
+                        <input type="text" name="keyword" value="{{old('keyword')}}" class="nav__email-input" placeholder="名前やメールアドレスを入力してください">
                     </li>
                     <li class="nav__gender">
                         <select name="gender" class="nav__gender-select">
                             <option value="">性別</option>
-                            <option value=""></option>
+                            <option value="1">男性</option>
+                            <option value="2">女性</option>
+                            <option value="3">その他</option>
                         </select>
                     </li>
                     <li class="nav__category">
@@ -31,7 +33,7 @@
                         </select>
                     </li>
                     <li class="nav__date">
-                        <input type="date" name="created_at" class="nav__date-input">
+                        <input type="date" name="created_at" value="{{old('created_at')}}" class="nav__date-input">
                     </li>
                     <li class="nav__search">
                         <button class="nav__search-submit">検索</button>
