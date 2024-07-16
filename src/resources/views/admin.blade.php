@@ -9,9 +9,9 @@
     <div class="admin__heading">
         <h2 class="admin__title">Admin</h2>
 
-        <nav class="admin__nav">
-            <form action="admin/search" method="get">
-                @csrf
+        <form action="admin/search" method="get">
+            @csrf
+            <nav class="admin__nav">
                 <ul>
                     <li class="nav__name">
                         <input type="text" name="keyword" value="{{old('keyword')}}" class="nav__email-input" placeholder="名前やメールアドレスを入力してください">
@@ -36,14 +36,14 @@
                         <input type="date" name="created_at" value="{{old('created_at')}}" class="nav__date-input">
                     </li>
                     <li class="nav__search">
-                        <button class="nav__search-submit">検索</button>
+                        <button class="nav__search-submit" type="submit">検索</button>
                     </li>
                     <li class="nav__reset">
                         <a class="nav__reset-submit" href="/admin">リセット</a>
                     </li>
                 </ul>
-            </form>
-        </nav>
+            </nav>
+        </form>
 
         <menu class="menu-bar">
             <button class="menu__csv-export">エクスポート</button>
@@ -75,10 +75,75 @@
                 <td class="table-data">{{$contact->email}}</td>
                 <td class="table-data">{{$contact->category['content']}}
                 </td>
-                <td class="table-data"><button class="table-data__button-detail">詳細</button></td>
+                <td class="table-data">
+                    <button class="table-data__button-detail" popovertarget="mypopover">詳細</button>
+                    <div id="mypopover" class="table-data__detail--modal" popover>
+                        <div class="table-data__detail-inner">
+                            <table>
+                                <tr>
+                                    <th>お名前</th>
+                                    <td>
+                                        <span>{{$contact->last_name}}</span><span>{{$contact->first_name}}</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>性別</th>
+                                    <td>
+                                        <p> @if($contact->gender==1)
+                                            {{'男性'}}
+                                            @elseif($contact->gender==2)
+                                            {{'女性'}}
+                                            @else
+                                            {{'その他'}}
+                                            @endif
+                                        </p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>メールアドレス</th>
+                                    <td>
+                                        <p>{{$contact->email}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>電話番号</th>
+                                    <td>
+                                        <p>{{$contact->tell}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>住所</th>
+                                    <td>
+                                        <p>{{$contact->address}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>建物名</th>
+                                    <td>
+                                        <p>{{$contact->building}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>お問い合わせの種類</th>
+                                    <td>
+                                        <p>{{$contact->category['content']}}</p>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>お問い合わせ内容</th>
+                                    <td>
+                                        <p>{{$contact->detail}}</p>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </td>
             </tr>
             @endforeach
         </table>
+
     </div>
 
 </div>

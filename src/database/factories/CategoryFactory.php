@@ -3,7 +3,7 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use App\Models\Category;
+use Database\Seeders\CategoryTableSeeder;
 
 class CategoryFactory extends Factory
 {
@@ -12,12 +12,10 @@ class CategoryFactory extends Factory
      *
      * @return array
      */
-    protected $model = Category::class;
-
     public function definition()
     {
         return [
-            //
+            
         ];
     }
 }

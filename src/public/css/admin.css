@@ -172,3 +172,9 @@
     padding: 8px 16px;
     text-decoration: none;
 }
+
+.table-data__detail-inner table{
+    max-width: 805px;
+    border: solid 1px #8B7969;
+    box-shadow: 4px 4px 4px #8B796940;
+}
