@@ -23,9 +23,13 @@ class ContactController extends Controller
 
     public function thanks(Request $request)
     {
-        $contact = $request->all();
-        unset($contact['_token']);
-        Contact::create($contact);
-        return view('thanks');
+        if ($request->input('back') == 'back') {
+            return redirect('/')->withInput();
+        } else {
+            $contact = $request->all();
+            unset($contact['_token']);
+            Contact::create($contact);
+            return view('thanks');
+        }
     }
 }

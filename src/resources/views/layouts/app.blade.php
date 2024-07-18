@@ -19,8 +19,10 @@
             <h1 class="header__site-title inika-regular">FashionablyLate</h1>
             <nav class="nav-menu">
                 <ul class="nav-menu__list">
+                    @if(Auth::guest())
                     <li class="nav-menu__item inika-regular"><a href="/register">register</a></li>
                     <li class="nav-menu__item inika-regular"><a href="/login">login</a></li>
+                    @endif
                     @if(Auth::check())
                     <form action="/logout" method="post">
                         @csrf

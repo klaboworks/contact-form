@@ -35,8 +35,9 @@
     align-items: center;
 }
 
-.nav__email {
+.nav__keyword {
     width: 340px;
+    height: 48px;
 }
 
 .nav__search,
@@ -47,6 +48,28 @@
 
 .nav__date {
     width: 148px;
+    height: 48px;
+    position: relative;
+}
+
+.nav__date input {
+    color: #8B7969;
+}
+
+input[type="date"]::-webkit-calendar-picker-indicator {
+    position: absolute;
+    top: 50%;
+    right: 4px;
+    transform: translateY(-50%);
+    margin: auto;
+    padding: 0;
+    background: transparent;
+    color: transparent;
+    height: 0;
+    width: 0;
+    border-top: 15px solid #E0DFDE;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
 }
 
 .nav__category {
@@ -55,8 +78,8 @@
 
 .nav__email-input,
 .nav__date-input {
-    height: 48px;
     width: 100%;
+    height: 100%;
     border: solid 1px #E3DED9;
     background-color: #F4F4F4;
     padding-left: 12px;
@@ -68,12 +91,34 @@
 
 .nav__gender-select,
 .nav__category-select {
+    position: relative;
     height: 52px;
     width: 100%;
-    border: solid 1px #E3DED9;
+}
+
+.nav__gender-select::before,
+.nav__category-select::before {
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    transform: translateY(-50%);
+    height: 0;
+    width: 0;
+    content: "";
+    border-top: 15px solid #E0DFDE;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+}
+
+.nav__gender-select select,
+.nav__category-select select {
+    width: 100%;
+    height: 100%;
     padding-left: 12px;
     background-color: #F4F4F4;
-    /* appearance: none; */
+    border: solid 1px #E3DED9;
+    appearance: none;
+    color: #8B7969;
 }
 
 .nav__search-submit {

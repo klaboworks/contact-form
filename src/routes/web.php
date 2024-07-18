@@ -24,3 +24,5 @@ Route::middleware('auth')->group(function () {
 });
 
 Route::get('/admin/search', [AdminController::class, 'search']);
+Route::get('/admin/csv-download', [AdminController::class, 'csv']);
+Route::delete('/admin/delete', [AdminController::class, 'delete']);

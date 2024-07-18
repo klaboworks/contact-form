@@ -79,7 +79,7 @@
 
         <div class="buttons-group">
             <button class="confirm-button__submit">送信</button>
-            <a href="/" class="confirm-link__correct">修正</a>
+            <button class="confirm-link__correct" type="submit" name="back" value="back">修正</button>
         </div>
     </form>
 </div>

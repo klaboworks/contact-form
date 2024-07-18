@@ -70,12 +70,58 @@ input {
     background-color: #F4F4F4;
 }
 
+input[type="radio"] {
+    position: relative;
+    width: 20px;
+    height: 20px;
+    border: 1px solid var(--brown);
+    border-radius: 50%;
+    vertical-align: -4px;
+    appearance: none;
+    margin-right: 12px;
+}
+
+input[type="radio"]:checked:before {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: var(--brown);
+    content: '';
+}
+
+.form-input__gender-button label {
+    color: var(--brown);
+}
+
+.form-input__category {
+    position: relative;
+}
+
+.form-input__category::before {
+    position: absolute;
+    top: 50%;
+    right: 52%;
+    transform: translateY(-50%);
+    content: "";
+    width: 0;
+    height: 0;
+    border-top: 15px solid var(--brown);
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+}
+
 select {
     width: 330px;
     height: 38px;
     padding-left: 12px;
     border: none;
     background-color: #F4F4F4;
+    color: var(--brown);
+    appearance: none;
 }
 
 textarea {

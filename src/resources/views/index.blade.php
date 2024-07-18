@@ -109,7 +109,7 @@
             <div class="form-title required">お問い合わせの種類</div>
             <div class="form-input">
                 <div class="form-input__category">
-                    <select name="category_id" id="">
+                    <select name="category_id">
                         <option value="" class="form-input__category--default">選択してください</option>
                         @foreach($categories as $category)
                         <option name="category_id" value="{{$category['id']}}">{{$category['content']}}</option>
