@@ -70,7 +70,7 @@
 
         <!-- 電話番号 -->
         <div class="form-group">
-            <div class="form-title required">電話番号</div>
+            <div class="form-title required">tell number</div>
             <div class="form-input">
                 <div class="form-input__tell">
                     <input type="text" name="tell" placeholder="09012345678" value="{{old('tell')}}">
